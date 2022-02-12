@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="navbar">
     <nav class="nav1">
         <li class="manu_buttom" ><button  @click="openSidebar"><i class="fa-solid fa-bars"  style="font-size:30px;" ></i></button></li>
         <li class="logo"><img src="../assets/logo.svg" /></li>
@@ -7,10 +7,13 @@
             <li class="Name_bar"><a  class="Name_nav"  >{{getFullName()}}</a></li> 
             <li class="close_buttom" ><a href=""><i  class="fa-solid fa-right-from-bracket" style="font-size:18px;"></i></a></li>
         </div>
+          <!-- <div class="nav2">
+        <h6>คณะวิศวกรรมศาสตร์ศรีราชา มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h6> 
+    </div> -->
     </nav>
-    <div class="nav2">
-        <a href="#">คณะวิศวกรรมศาสตร์ศรีราชา มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</a> 
-    </div>
+     <!-- <div class="nav2">
+        <h6>คณะวิศวกรรมศาสตร์ศรีราชา มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h6> 
+    </div> -->
     
     
  
@@ -43,21 +46,22 @@ export default {
 </script>
 
 <style >
-.container{
+.navbar{
         height: auto;
-        max-width: 100%;
+        width: 100%;
         margin: 0;
         padding: 0; 
         
+        
     }
     .nav1{
-        position: absolute;
+        position: relative;
         background-color: rgba(104, 12, 7, 1) ; 
         display: flex;
+        height: auto;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-  
     }
     li button i{
         color:rgba(255, 255, 255, 1);
@@ -68,27 +72,33 @@ export default {
         padding: 10px 10px;
         white-space: nowrap;
     }
-    .logo{
-        position: relative;
+    .nav1 a{
+        color:rgba(255, 255, 255, 1);
+    }
+    .nav1 .logo{
+    
         margin: 0 auto;
-        left: 120px;
+        position: relative;
+        left: 130px;
+        
     }
     .closeandname{
         display: flex;
         justify-content: space-between;
         
     }
-    .nav2{
-        position: absolute;
-        margin: 65px 0;
-        height: 30px;
+    /* .nav2{
+        top: 52px;
         width: 100%;
+        height: 26px;
         background-color: rgba(135, 18, 12, 1) ;
-        display: flex;
-        align-items: center;
+        position: relative;
     }
-    a{
-        color:rgba(255, 255, 255, 1);
-        margin: 0 auto;
-    }
+     .nav2 h6{
+
+        color:white;
+        left: 35%;
+        position: re;
+    }  */
+    
 </style>

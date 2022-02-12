@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Sidebar from '../components/Sidebar.vue'
+// import Sidebar from '../components/Sidebar.vue'
 
 Vue.use(VueRouter)
 
@@ -8,9 +8,9 @@ const routes = [
   {
     path: '/',
     name: 'Sidebar',
-    component: Sidebar,
+    component: () => import('../components/Sidebar.vue'),
     children:[
-
+      
     ]
   },
  

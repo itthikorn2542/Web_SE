@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="sidebar">
     <div class="sidebar-box" :class="{'w-0':!sidebarOpen,'w-200':sidebarOpen}">
             <div class="sidebar_data">
                 <li class="side_img"><a href="#"><img  src="../assets/user.svg"></a></li> 
@@ -56,7 +56,7 @@
     </div>
     <div style="display: flex;
     flex-direction: column;
-    width:100vmax">
+    width:1010vmax">
         <Navbar @openSidebar="openSidebar"/>
         <router-view />
     </div>
@@ -72,7 +72,7 @@ export default {
     name:"Sidebar",
     data(){
         return{
-            sidebarOpen:true
+            sidebarOpen:false
         }
         
     },
@@ -86,18 +86,18 @@ export default {
 </script>
 
 <style >
-.container{
+.sidebar{
     display: flex;
-
-
 }
 .sidebar-box{
+    position: relative;
     height: 100vh;
     width: 300px;
     background-color: rgba(104, 12, 7, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: 500px;
     /* justify-content: center; */
 }
 .sidebar-box .side_img{
@@ -111,12 +111,6 @@ export default {
         display: flex;
         align-items: center;
 }
-/* .side_buttom{
-    position: relative;
-    top: -22px;
-    background-color: wheat;
-    
-} */
 .side_img{
     position: relative;
     top: 20px;
@@ -143,8 +137,6 @@ export default {
   
 }
 
-
-
 .w-0{
     width: 0px;
     transition: 0.5s;
@@ -157,8 +149,6 @@ export default {
     animation-duration: 3s; 
     opacity: 1;
     visibility: visible;
-
-
 }
 
 

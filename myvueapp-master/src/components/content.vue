@@ -7,7 +7,7 @@
                     <h1>สถานะขอทุน</h1><br/>
                     <h5>{{getFullName()}}</h5>
                 </div> 
-                <center><div class="Table_User"  >
+                <div class="Table_User">
                     <table class="table table-striped">
                         <thead >
                             <tr>
@@ -43,11 +43,15 @@
                           
                         </tbody>
                     </table>
-                </div></center>
+                </div>
+                <div class="Buttom_back" >
+                    <button type="button" class="btn btn-danger"><a >Back</a></button>
+                </div>
+                
     </section>
 </template>
 
-<script scoped>
+<script >
 export default {
     name:"Content",
     data(){
@@ -72,33 +76,47 @@ export default {
         position: relative;
         height: 100%;
         max-width: 100%;
-        margin: 0;
-        padding: 0;
-        
-/* border:1px solid tan ; */
+        padding: 130px;     
     }
+
     .Profile_User{
         position: relative;
         top: 10px;
     }
-    h1,h5{
+   .Profile_User h1,h5{
         color: rgba(104, 12, 7, 1);
         text-align: center;
+        font-size : 20px;
     }
     .Table_User{
         position: relative;
-        top: 40px;
-        width: 80%;
+        top: 50px;
+        height: auto;
+        width: 85%;
+
     }
-    table{
+    table thead tr,td,th{
         position: relative;
-        top: 15px; 
+        /* top: 15px;  */
         table-layout: auto;
-    }
-    tr,td,th{
         text-align: center;
         border:1px solid tan ;
         border-width: thin;
-
     }
+    .Buttom_back{
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 0;    
+        height: auto;
+        display:flex  ;
+        top: 20%;
+    }
+    .Buttom_back button{
+        position: relative;
+        width: 80px;
+        height: 50px;
+        background: rgba(180, 45, 37, 1);
+    }
+    
 </style>
