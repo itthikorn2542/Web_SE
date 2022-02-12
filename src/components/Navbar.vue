@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
-      <button  @click="openSidebar">&#9776;</button>
-      <button class="logout">logout</button>
+      <div  @click="openSidebar" class="menu-icon"><i class="fa fa-bars text-white" aria-hidden="true"></i></div>
+      <div class="logout"><i class="fa fa-power-off text-white" aria-hidden="true"></i></div>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
   /* width: 100vh;
   max-width: 100vh; */
   /* max-width: 100vh; */
-  background-color: green;
+  background-color: rgb(128, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,9 +35,20 @@ export default {
 
 }
 .logout{
-    background-color: red;
     color: white;
     padding: 2px;
     border-radius: 2px;
+}
+.menu-icon{
+    font-size: 18px;
+}
+.menu-icon:hover{
+    cursor: pointer;
+}
+.logout:hover{
+    cursor: pointer;
+}
+.text-white{
+    color: white;
 }
 </style>
